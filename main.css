@@ -1,0 +1,153 @@
+:root
+{
+    --primary: #9b59b6;
+    --primary-dark: #8e44ad;
+    --secondary: #ecf0f1;
+    --secondary-dark: #bdc3c7;
+    --font-light: #d3d3d3;
+    --font-dark: #1e2329;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    color: var(--font);
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+.logo
+{
+    background-color: var(--primary);
+    padding: 10px;
+    color: var(--font-light);
+}
+.logo h1
+{
+    margin: 0 auto;
+    font-size: 20px;
+}
+.nav
+{
+    min-width: 200px;
+    background-color: var(--primary-dark);
+}
+.button
+{
+    text-decoration: none;
+    color: var(--font-light);
+    display: block;
+    padding: 10px;
+}
+.button:hover
+{
+    background-color: var(--primary);
+}
+.middle
+{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: var(--secondary);
+}
+.content
+{
+    flex-grow: 1;
+    /* padding: 10px; */
+}
+.content .summary
+{
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--secondary-dark);
+}
+.content .summary h2
+{
+    color: var(--primary);
+}
+.list
+{
+    list-style-type: cjk-heavenly-stem;
+}
+.posts
+{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.post
+{
+    width: 40%;
+    border-radius: 5px;
+    position: relative;
+    padding: 5px;
+}
+.post-image
+{
+    max-height: 400px;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+.post-image img
+{
+    width: 100%;
+    height: 100%;
+}
+.post .rank
+{
+    padding: 5px;
+    color: var(--font-light);
+    background-color: var(--primary);
+    border-radius: 0 0 5px 5px;
+}
+.post .image-info
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: var(--primary-dark);
+    transition: 0.5s opacity ease-in-out;
+    color: var(--font-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.post .image-info:hover
+{
+    opacity: 1;
+}
+.post .image-info h3
+{
+    text-decoration: underline;
+}
+.ad
+{
+    width: 100%;
+    height: 600px;
+    background-image: url(ad.png);
+    background-repeat: no-repeat; 
+    background-size: contain; 
+    background-position: center;
+}
+.footer
+{
+    padding: 10px;
+    background-color: var(--primary);
+    color: var(--font-light);
+}
+.container > *
+{
+    border: 2px solid red;
+}
+
